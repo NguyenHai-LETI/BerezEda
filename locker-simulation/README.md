@@ -1,42 +1,42 @@
-# Locker Simulation — Hệ thống 2
+# Симулятор локера — Система 2
 
-Mô phỏng màn hình locker thực tế, tích hợp với hệ thống food-marketplace (Hệ thống 1).
+Симулирует экран реального локера, интегрирован с маркетплейсом еды (Система 1).
 
-## Cấu trúc
+## Структура
 
 ```
 locker-simulation/
-├── BE/   FastAPI, port 8001
-└── FE/   Next.js, port 3001
+├── BE/   FastAPI, порт 8001
+└── FE/   Next.js, порт 3001
 ```
 
-## Khởi động
+## Запуск
 
-### Backend (port 8001)
+### Backend (порт 8001)
 
 ```bash
 cd locker-simulation/BE
-pip install -r requirements.txt   # lần đầu
+pip install -r requirements.txt   # первый раз
 python run.py
 ```
 
-### Frontend (port 3001)
+### Frontend (порт 3001)
 
 ```bash
 cd locker-simulation/FE
-npm install      # lần đầu
+npm install      # первый раз
 npm run dev
 ```
 
-## Yêu cầu
+## Требования
 
-- PostgreSQL chạy local, database `locker_simulation` đã được tạo
-- Hệ thống 1 chạy ở port 8000 (để callback hoạt động)
+- PostgreSQL запущен локально, база данных `locker_simulation` создана
+- Система 1 запущена на порту 8000 (для работы callback)
 
-## Kiểm tra
+## Проверка
 
 ```bash
-# BE health check
+# Проверка работоспособности BE
 curl http://localhost:8001/health
 
 # FE
@@ -45,40 +45,40 @@ open http://localhost:3001
 
 ## API Endpoints (BE)
 
-| Method | Path | Mô tả |
-|--------|------|--------|
-| POST | `/api/locker-codes/register-deposit` | Hệ thống 1 gọi sau khi shop assign locker → tạo mã AA |
-| POST | `/api/locker-codes/register-pickup` | Hệ thống 1 gọi sau khi user thanh toán → tạo mã BB |
-| POST | `/api/qr/validate` | Validate mã QR, trả về code_type + IDs |
-| POST | `/api/simulate/deposit-confirmed` | Xác nhận đặt hàng vào locker (mã AA) |
-| POST | `/api/simulate/pickup-confirmed` | Xác nhận lấy hàng ra khỏi locker (mã BB) |
-| GET  | `/health` | Health check |
+| Метод | Путь | Описание |
+|-------|------|----------|
+| POST | `/api/locker-codes/register-deposit` | Система 1 вызывает после назначения локера магазином → создаёт код AA |
+| POST | `/api/locker-codes/register-pickup` | Система 1 вызывает после оплаты покупателем → создаёт код BB |
+| POST | `/api/qr/validate` | Валидация QR-кода, возвращает code_type + IDs |
+| POST | `/api/simulate/deposit-confirmed` | Подтверждение помещения заказа в локер (код AA) |
+| POST | `/api/simulate/pickup-confirmed` | Подтверждение извлечения заказа из локера (код BB) |
+| GET  | `/health` | Проверка работоспособности |
 
-## Luồng hoạt động
+## Сценарии работы
 
-### Seller đặt hàng vào locker (mã AA)
-1. Hệ thống 1 gọi `register-deposit` → Hệ thống 2 tạo mã `AA123456`
-2. Hệ thống 1 hiển thị QR mã AA cho seller
-3. Seller quét QR trên Locker Simulator
-4. Hệ thống 2 validate → hiển thị nút "Mô phỏng cho đồ vào"
-5. Seller bấm nút → Hệ thống 2 callback vào Hệ thống 1 `/internal/locker-sim/deposit`
-6. Hệ thống 1 cập nhật: combo status → `available`, unit status → `occupied`, sync Firebase
+### Продавец кладёт заказ в локер (код AA)
+1. Система 1 вызывает `register-deposit` → Система 2 создаёт код `AA123456`
+2. Система 1 отображает QR с кодом AA для продавца
+3. Продавец сканирует QR в симуляторе локера
+4. Система 2 валидирует → отображает кнопку «Симулировать помещение товара»
+5. Продавец нажимает кнопку → Система 2 делает callback в Систему 1 `/internal/locker-sim/deposit`
+6. Система 1 обновляет: статус комбо → `available`, статус ячейки → `occupied`, синхронизация Firebase
 
-### Buyer lấy hàng ra (mã BB)
-1. Hệ thống 1 gọi `register-pickup` sau khi thanh toán → tạo mã `BB654321`
-2. Hệ thống 1 hiển thị QR mã BB cho buyer (trang chi tiết đơn hàng)
-3. Buyer quét QR trên Locker Simulator
-4. Hệ thống 2 validate → hiển thị nút "Mô phỏng lấy đồ ra"
-5. Buyer bấm nút → Hệ thống 2 callback vào Hệ thống 1 `/internal/locker-sim/pickup`
-6. Hệ thống 1 cập nhật: order status → `completed`, unit status → `available`, xóa combo khỏi Firebase
+### Покупатель забирает заказ (код BB)
+1. Система 1 вызывает `register-pickup` после оплаты → создаётся код `BB654321`
+2. Система 1 отображает QR с кодом BB для покупателя (страница деталей заказа)
+3. Покупатель сканирует QR в симуляторе локера
+4. Система 2 валидирует → отображает кнопку «Симулировать извлечение товара»
+5. Покупатель нажимает кнопку → Система 2 делает callback в Систему 1 `/internal/locker-sim/pickup`
+6. Система 1 обновляет: статус заказа → `completed`, статус ячейки → `available`, удаление комбо из Firebase
 
-## Mã QR
+## QR-коды
 
-- **AA**: mã deposit, dành cho seller, format `AA{6 chữ số}`, hết hạn khi bị ghi đè bởi order mới
-- **BB**: mã pickup, dành cho buyer, format `BB{6 chữ số}`, hết hạn theo `pickup_deadline` của order
-- 6 chữ số là duy nhất trên toàn bộ các mã đang active
+- **AA**: код помещения, для продавца, формат `AA{6 цифр}`, истекает при перезаписи новым заказом
+- **BB**: код получения, для покупателя, формат `BB{6 цифр}`, истекает по `pickup_deadline` заказа
+- 6 цифр уникальны среди всех активных кодов
 
-## Biến môi trường
+## Переменные окружения
 
 ### BE (`BE/.env`)
 ```

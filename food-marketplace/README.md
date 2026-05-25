@@ -1,78 +1,78 @@
-# BerezEda — Food Marketplace (Hệ thống 1)
+# БережЕда — Маркетплейс еды (Система 1)
 
-Nền tảng thương mại thực phẩm tích hợp locker tự động, hỗ trợ đa vai trò: admin, khách hàng, chủ cửa hàng, chủ locker.
+Платформа торговли едой с интеграцией автоматических локеров, поддерживает несколько ролей: администратор, покупатель, владелец магазина, владелец локера.
 
-## Cấu trúc
+## Структура
 
 ```
 food-marketplace/
-├── BE/   FastAPI, port 8000
-└── FE/   Next.js, port 3000
+├── BE/   FastAPI, порт 8000
+└── FE/   Next.js, порт 3000
 ```
 
-## Yêu cầu
+## Требования
 
 - Python 3.10+
 - Node.js 18+
-- PostgreSQL chạy local, database `berezh_eda` đã được tạo
+- PostgreSQL запущен локально, база данных `berezh_eda` создана
 - Firebase project (service account JSON)
 
-## Cài đặt & chạy Backend (port 8000)
+## Установка и запуск Backend (порт 8000)
 
 ```bash
 cd food-marketplace/BE
 
-# Tạo và kích hoạt virtual environment
+# Создать и активировать виртуальное окружение
 python -m venv .venv
 .venv\Scripts\activate        # Windows
 # source .venv/bin/activate   # Linux/Mac
 
-# Cài dependencies
+# Установить зависимости
 pip install -r requirements.txt
 
-# Cấu hình môi trường
+# Настроить переменные окружения
 cp .env.example .env
-# Sửa .env: DATABASE_URL, SECRET_KEY, Firebase credentials, Fincode keys
+# Заполнить .env: DATABASE_URL, SECRET_KEY, Firebase credentials, Fincode keys
 
-# Khởi động server (tạo bảng tự động lần đầu)
+# Запустить сервер (таблицы создаются автоматически при первом запуске)
 python run.py
 ```
 
 Swagger UI: http://localhost:8000/docs
 
-## Cài đặt & chạy Frontend (port 3000)
+## Установка и запуск Frontend (порт 3000)
 
 ```bash
 cd food-marketplace/FE
 
-# Cài dependencies
+# Установить зависимости
 npm install
 
-# Cấu hình môi trường
-# Tạo file .env.local với các biến Firebase và API URL
+# Настроить переменные окружения
+# Создать файл .env.local с переменными Firebase и API URL
 
-# Chạy development server
+# Запустить сервер разработки
 npm run dev
 ```
 
-Truy cập: http://localhost:3000
+Открыть: http://localhost:3000
 
-## Biến môi trường
+## Переменные окружения
 
-### BE (`BE/.env`) — copy từ `.env.example` rồi điền
+### BE (`BE/.env`) — скопировать из `.env.example` и заполнить
 
-| Biến | Mô tả |
-|------|-------|
-| `DATABASE_URL` | PostgreSQL connection string |
-| `SECRET_KEY` | JWT secret key |
-| `GOOGLE_APPLICATION_CREDENTIALS` | Đường dẫn đến file Firebase service account JSON |
+| Переменная | Описание |
+|-----------|---------|
+| `DATABASE_URL` | Строка подключения PostgreSQL |
+| `SECRET_KEY` | JWT секретный ключ |
+| `GOOGLE_APPLICATION_CREDENTIALS` | Путь к файлу Firebase service account JSON |
 | `FIREBASE_PROJECT_ID` | Firebase project ID |
 | `FIREBASE_WEB_API_KEY` | Firebase Web API key |
-| `FINCODE_PUBLIC_KEY` | Fincode payment public key |
-| `FINCODE_SECRET_KEY` | Fincode payment secret key |
-| `LOCKER_SIM_URL` | URL của Hệ thống 2 (mặc định: `http://localhost:8001/api`) |
+| `FINCODE_PUBLIC_KEY` | Публичный ключ Fincode |
+| `FINCODE_SECRET_KEY` | Секретный ключ Fincode |
+| `LOCKER_SIM_URL` | URL Системы 2 (по умолчанию: `http://localhost:8001/api`) |
 
-### FE (`FE/.env.local`) — tạo thủ công
+### FE (`FE/.env.local`) — создать вручную
 
 ```
 NEXT_PUBLIC_API_URL=http://localhost:8000/api
@@ -84,7 +84,7 @@ NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=...
 NEXT_PUBLIC_FIREBASE_APP_ID=...
 ```
 
-## Tích hợp với Hệ thống 2
+## Интеграция с Системой 2
 
-Hệ thống 2 (locker-simulation) phải chạy ở port 8001 để các tính năng locker hoạt động.
-Cấu hình `LOCKER_SIM_URL=http://localhost:8001/api` trong `BE/.env`.
+Система 2 (locker-simulation) должна быть запущена на порту 8001 для работы функций локера.
+Указать `LOCKER_SIM_URL=http://localhost:8001/api` в `BE/.env`.
