@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "Главная",
+    "history": "История покупок",
+    "map": "Карта",
+    "favorites": "Избранное",
+    "notifications": "Уведомления",
+    "profile": "Профиль"
+  },
+  "bottom_nav": {
+    "home": "Главная",
+    "history": "История",
+    "map": "Карта",
+    "favorites": "Избранное",
+    "notifications": "Уведомл.",
+    "profile": "Профиль"
+  },
+  "header": {
+    "back": "Назад",
+    "my_profile": "Мой профиль",
+    "account_settings": "Настройки аккаунта",
+    "payment": "Способы оплаты",
+    "support": "Поддержка",
+    "logout": "Выйти",
+    "language": "Язык"
+  },
+  "pages": {
+    "home": "Главная",
+    "history": "История покупок",
+    "map": "Карта",
+    "favorites": "Избранное",
+    "profile": "Профиль",
+    "notifications": "Уведомления",
+    "account": "Аккаунт",
+    "my_reviews": "Мои отзывы",
+    "payment": "Способы оплаты",
+    "privacy": "Конфиденциальность",
+    "terms": "Условия",
+    "contact": "Связаться",
+    "checkout": "Оформление",
+    "new_review": "Оставить отзыв",
+    "combo": "Набор",
+    "order": "Заказ",
+    "shop": "Магазин",
+    "language": "Язык"
+  },
+  "mypage": {
+    "title": "Профиль",
+    "edit": "Редактировать",
+    "saved_combos": "🌱 Наборы спасены",
+    "reviews_badge": "⭐ Отзывы",
+    "account": "Аккаунт",
+    "notifications": "Уведомления",
+    "my_reviews": "Мои отзывы",
+    "payment": "Способы оплаты",
+    "language": "Язык",
+    "privacy": "Политика конфиденциальности",
+    "terms": "Условия использования",
+    "contact": "Связаться с нами",
+    "version": "Версия"
+  },
+  "language": {
+    "title": "Язык интерфейса",
+    "subtitle": "Выберите язык",
+    "ru": "Русский",
+    "en": "English",
+    "vi": "Tiếng Việt"
+  },
+  "home": {
+    "today": "Сегодня",
+    "greeting": "Привет, {name}! 👋",
+    "guest": "гость",
+    "tagline": "Спасайте еду, экономьте до 70% и помогайте планете.",
+    "this_month": "в этом месяце",
+    "saved_count": "наборов спасено",
+    "co2_saved": "CO₂ сэкономлено",
+    "combos_section": "Наборы со скидкой",
+    "combos_subtitle": "{count} набора рядом · обновлено только что",
+    "filter_all": "Все",
+    "filter_today": "Сегодня",
+    "filter_deep": "Скидка ≥30%",
+    "empty_title": "Нет доступных наборов",
+    "empty_sub": "Следите за появлением новых!",
+    "lockers_section": "Постаматы",
+    "lockers_subtitle": "Постаматы поблизости",
+    "view_map": "Все на карте →",
+    "combos_available": "Наборов: {count}",
+    "dist_m": "{n} м",
+    "dist_km": "{n} км",
+    "show_more": "Показать ещё ({n})",
+    "show_less": "Свернуть"
+  },
+  "seller": {
+    "role": "Продавец",
+    "cabinet": "Кабинет продавца",
+    "default_name": "Продавец",
+    "nav": {
+      "home": "Главная",
+      "add_item": "Добавить набор",
+      "sales_history": "История продаж",
+      "revenue": "Выручка",
+      "notifications": "Уведомления",
+      "my_items": "Мои наборы",
+      "products": "Мои продукты",
+      "settings": "Настройки"
+    },
+    "dropdown": {
+      "shop_settings": "Настройки магазина"
+    }
+  },
+  "admin": {
+    "role": "Админ",
+    "default_name": "Админ",
+    "nav": {
+      "users": "Пользователи"
+    },
+    "dropdown": {
+      "dashboard": "Панель управления"
+    }
+  },
+  "locker_owner": {
+    "role": "Владелец постамата",
+    "default_name": "Владелец",
+    "nav": {
+      "home": "Главная",
+      "my_lockers": "Мои постаматы"
+    },
+    "dropdown": {
+      "my_lockers": "Мои постаматы"
+    }
+  }
+}

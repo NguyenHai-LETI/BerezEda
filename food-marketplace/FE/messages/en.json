@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "Home",
+    "history": "Purchase History",
+    "map": "Map",
+    "favorites": "Favorites",
+    "notifications": "Notifications",
+    "profile": "Profile"
+  },
+  "bottom_nav": {
+    "home": "Home",
+    "history": "History",
+    "map": "Map",
+    "favorites": "Saved",
+    "notifications": "Notifs.",
+    "profile": "Profile"
+  },
+  "header": {
+    "back": "Back",
+    "my_profile": "My Profile",
+    "account_settings": "Account Settings",
+    "payment": "Payment Methods",
+    "support": "Support",
+    "logout": "Log Out",
+    "language": "Language"
+  },
+  "pages": {
+    "home": "Home",
+    "history": "Purchase History",
+    "map": "Map",
+    "favorites": "Favorites",
+    "profile": "Profile",
+    "notifications": "Notifications",
+    "account": "Account",
+    "my_reviews": "My Reviews",
+    "payment": "Payment Methods",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact",
+    "checkout": "Checkout",
+    "new_review": "Leave a Review",
+    "combo": "Combo",
+    "order": "Order",
+    "shop": "Shop",
+    "language": "Language"
+  },
+  "mypage": {
+    "title": "Profile",
+    "edit": "Edit",
+    "saved_combos": "🌱 Combos Saved",
+    "reviews_badge": "⭐ Reviews",
+    "account": "Account",
+    "notifications": "Notifications",
+    "my_reviews": "My Reviews",
+    "payment": "Payment Methods",
+    "language": "Language",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "contact": "Contact Us",
+    "version": "Version"
+  },
+  "language": {
+    "title": "Interface Language",
+    "subtitle": "Select language",
+    "ru": "Русский",
+    "en": "English",
+    "vi": "Tiếng Việt"
+  },
+  "home": {
+    "today": "Today",
+    "greeting": "Hello, {name}! 👋",
+    "guest": "guest",
+    "tagline": "Save food, save up to 70% and help the planet.",
+    "this_month": "this month",
+    "saved_count": "combos saved",
+    "co2_saved": "CO₂ saved",
+    "combos_section": "Discounted Combos",
+    "combos_subtitle": "{count} combos nearby · just updated",
+    "filter_all": "All",
+    "filter_today": "Today",
+    "filter_deep": "Discount ≥30%",
+    "empty_title": "No combos available",
+    "empty_sub": "Check back soon for new offers!",
+    "lockers_section": "Lockers",
+    "lockers_subtitle": "Nearby lockers",
+    "view_map": "View all on map →",
+    "combos_available": "Combos: {count}",
+    "dist_m": "{n} m",
+    "dist_km": "{n} km",
+    "show_more": "Show more ({n})",
+    "show_less": "Show less"
+  },
+  "seller": {
+    "role": "Seller",
+    "cabinet": "Seller Dashboard",
+    "default_name": "Seller",
+    "nav": {
+      "home": "Home",
+      "add_item": "Add Combo",
+      "sales_history": "Sales History",
+      "revenue": "Revenue",
+      "notifications": "Notifications",
+      "my_items": "My Combos",
+      "products": "My Products",
+      "settings": "Settings"
+    },
+    "dropdown": {
+      "shop_settings": "Shop Settings"
+    }
+  },
+  "admin": {
+    "role": "Admin",
+    "default_name": "Admin",
+    "nav": {
+      "users": "Users"
+    },
+    "dropdown": {
+      "dashboard": "Dashboard"
+    }
+  },
+  "locker_owner": {
+    "role": "Locker Owner",
+    "default_name": "Owner",
+    "nav": {
+      "home": "Home",
+      "my_lockers": "My Lockers"
+    },
+    "dropdown": {
+      "my_lockers": "My Lockers"
+    }
+  }
+}

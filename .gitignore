@@ -1,0 +1,57 @@
+# Chỉ track 2 hệ thống, bỏ qua mọi thứ khác ở root
+/*
+!/.gitignore
+!/food-marketplace/
+!/locker-simulation/
+
+# Bỏ qua các thư mục handoff (tài liệu, không phải code)
+food-marketplace/handoff_berezheda/
+food-marketplace/handoff_customer/
+
+# --- Dependencies ---
+node_modules/
+.next/
+tsconfig.tsbuildinfo
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+*.egg
+build/
+dist/
+
+# --- Sensitive / Credentials ---
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+.env.*.local
+*-firebase-adminsdk-*.json
+*.pem
+secrets.json
+
+# --- Uploads & generated ---
+uploads/
+
+# --- Testing / Coverage ---
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# --- IDE ---
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+*.log

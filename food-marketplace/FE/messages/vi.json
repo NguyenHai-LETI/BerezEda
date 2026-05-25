@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "history": "Lịch sử mua hàng",
+    "map": "Bản đồ",
+    "favorites": "Yêu thích",
+    "notifications": "Thông báo",
+    "profile": "Hồ sơ"
+  },
+  "bottom_nav": {
+    "home": "Trang chủ",
+    "history": "Lịch sử",
+    "map": "Bản đồ",
+    "favorites": "Yêu thích",
+    "notifications": "Thông báo",
+    "profile": "Hồ sơ"
+  },
+  "header": {
+    "back": "Quay lại",
+    "my_profile": "Hồ sơ của tôi",
+    "account_settings": "Cài đặt tài khoản",
+    "payment": "Phương thức thanh toán",
+    "support": "Hỗ trợ",
+    "logout": "Đăng xuất",
+    "language": "Ngôn ngữ"
+  },
+  "pages": {
+    "home": "Trang chủ",
+    "history": "Lịch sử mua hàng",
+    "map": "Bản đồ",
+    "favorites": "Yêu thích",
+    "profile": "Hồ sơ",
+    "notifications": "Thông báo",
+    "account": "Tài khoản",
+    "my_reviews": "Đánh giá của tôi",
+    "payment": "Phương thức thanh toán",
+    "privacy": "Bảo mật",
+    "terms": "Điều khoản",
+    "contact": "Liên hệ",
+    "checkout": "Thanh toán",
+    "new_review": "Viết đánh giá",
+    "combo": "Combo",
+    "order": "Đơn hàng",
+    "shop": "Cửa hàng",
+    "language": "Ngôn ngữ"
+  },
+  "mypage": {
+    "title": "Hồ sơ",
+    "edit": "Chỉnh sửa",
+    "saved_combos": "🌱 Combo đã lưu",
+    "reviews_badge": "⭐ Đánh giá",
+    "account": "Tài khoản",
+    "notifications": "Thông báo",
+    "my_reviews": "Đánh giá của tôi",
+    "payment": "Phương thức thanh toán",
+    "language": "Ngôn ngữ",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản sử dụng",
+    "contact": "Liên hệ",
+    "version": "Phiên bản"
+  },
+  "language": {
+    "title": "Ngôn ngữ giao diện",
+    "subtitle": "Chọn ngôn ngữ",
+    "ru": "Русский",
+    "en": "English",
+    "vi": "Tiếng Việt"
+  },
+  "home": {
+    "today": "Hôm nay",
+    "greeting": "Xin chào, {name}! 👋",
+    "guest": "khách",
+    "tagline": "Giải cứu thực phẩm, tiết kiệm đến 70% và chung tay bảo vệ môi trường.",
+    "this_month": "tháng này",
+    "saved_count": "combo đã lưu",
+    "co2_saved": "CO₂ tiết kiệm",
+    "combos_section": "Combo giảm giá",
+    "combos_subtitle": "{count} combo gần đây · vừa cập nhật",
+    "filter_all": "Tất cả",
+    "filter_today": "Hôm nay",
+    "filter_deep": "Giảm ≥30%",
+    "empty_title": "Không có combo nào",
+    "empty_sub": "Hãy theo dõi để nhận ưu đãi mới!",
+    "lockers_section": "Tủ đồ",
+    "lockers_subtitle": "Tủ đồ gần đây",
+    "view_map": "Xem tất cả trên bản đồ →",
+    "combos_available": "Combo: {count}",
+    "dist_m": "{n} m",
+    "dist_km": "{n} km",
+    "show_more": "Xem thêm ({n})",
+    "show_less": "Thu gọn"
+  },
+  "seller": {
+    "role": "Người bán",
+    "cabinet": "Trang quản lý",
+    "default_name": "Người bán",
+    "nav": {
+      "home": "Trang chủ",
+      "add_item": "Thêm combo",
+      "sales_history": "Lịch sử bán",
+      "revenue": "Doanh thu",
+      "notifications": "Thông báo",
+      "my_items": "Combo của tôi",
+      "products": "Sản phẩm",
+      "settings": "Cài đặt"
+    },
+    "dropdown": {
+      "shop_settings": "Cài đặt cửa hàng"
+    }
+  },
+  "admin": {
+    "role": "Quản trị viên",
+    "default_name": "Admin",
+    "nav": {
+      "users": "Người dùng"
+    },
+    "dropdown": {
+      "dashboard": "Bảng điều khiển"
+    }
+  },
+  "locker_owner": {
+    "role": "Chủ tủ đồ",
+    "default_name": "Chủ tủ",
+    "nav": {
+      "home": "Trang chủ",
+      "my_lockers": "Tủ của tôi"
+    },
+    "dropdown": {
+      "my_lockers": "Tủ của tôi"
+    }
+  }
+}

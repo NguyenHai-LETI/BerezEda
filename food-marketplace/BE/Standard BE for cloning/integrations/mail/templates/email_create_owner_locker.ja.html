@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ title_email }}</title>
+  </head>
+
+  <body>
+    <p>
+      wakeatte全国版<br />
+      管理画面のアカウントの作成が完了しました。<br /><br />
+
+      アカウント情報は以下のとおりです。<br />
+      ----------------------------------　<br />
+      メール: {{ email }}<br />
+      パスワード: {{ password }}<br /><br />
+      ----------------------------------　<br />
+      食の環（wa）keatte管理画面にログインするには、<br />
+      以下のリンクをクリックしてください。<br />
+      WEB: <a href="{{ web_url }}">こちらをクリック</a><br />
+      ※管理画面はWEBのみとなります<br />
+      一般向け「wakeatte」アプリはこちら<br />
+      ----------------------------------　<br />
+      App Store: <a href="{{ appstore_url }}">こちらをクリック</a><br />
+      Google Store: <a href="{{ googleplay_url }}">こちらをクリック</a><br />
+      ----------------------------------　<br />
+
+      ご不明な点がございましたら、管理者までご連絡ください。
+    </p>
+  </body>
+</html>
